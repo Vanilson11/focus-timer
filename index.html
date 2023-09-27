@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer V2</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <section id="icons">
+      <span class="sr-only">Ativar light mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
+    </section>
+    <div class="focus-wrapper">
+      <div id="count-wrapper">
+        <div class="count">
+          <span id="minutes">25</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+        <div id="controls">
+          <button data-action="toggleRunning" class="ph-bold ph-play-circle"><span class="sr-only">Inicar</span></button>
+          <button data-action="toggleRunning" class="ph-bold ph-pause-circle secondary"><span class="sr-only">Pausar</span></button>
+          <button data-action="setMinutes" class="ph ph-timer"><span class="sr-only">Adicionar os minutos</span></button>
+          <button data-action="reset" class="ph ph-stop-circle secondary"><span class="sr-only">Resetar</span></button>
+          <button data-action="setFiveMinutes" class="ph-bold ph-plus-circle"><span class="sr-only">Adicionar 5 minutos</span></button>
+          <button data-action="subFiveMinutes" class="ph-bold ph-minus-circle"><span class="sr-only">Retirar 5 minutos</span></button>
+        </div>
+      </div>
+
+      <div id="audios-wrapper">
+        <div class="audio ph-bold ph-tree" data-action="forestSound"><span class="sr-only">Tocar fundo musical com sons de floresta</span></div>
+        <div class="audio ph-bold ph-cloud-rain" data-action="rainSound"><span class="sr-only">Tocar fundo musical com som de chuva.</span></div>
+        <div class="audio ph-bold ph-storefront" data-action="coffeAudio"><span class="sr-only">Tocar fundo musical com som ambiente de cafeteria.</span></div>
+        <div class="audio ph-bold ph-campfire" data-action="fireAudio"><span class="sr-only">Tocar fundo musical com som de fogueira.</span></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
